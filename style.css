@@ -86,3 +86,39 @@ body {
     font-weight: 600;
     opacity: 0.25;
   }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header_text {
+      font-size: 40px;
+    }
+  
+    .text {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header_text {
+      font-size: 30px;
+    }
+  
+    .text {
+      font-size: 18px;
+    }
+  
+    .btn {
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+    }
+  }
+  
