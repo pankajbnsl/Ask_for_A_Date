@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Do you wanna go out with me?</h1>
+      </div>
+      <p>
+        <a href="https://www.instagram.com/iampnkj__/" target="_blank">@iampnkj__</a>
+      </p>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+              var button = document.getElementById("noButton");
+
+              if (!button) return; 
+              button.style.position = "absolute";
+
+
+              var buttonWidth = button.offsetWidth;
+              var buttonHeight = button.offsetHeight;
+
+
+              var maxX = window.innerWidth - buttonWidth;
+              var maxY = window.innerHeight - buttonHeight;
+
+              var x = Math.random() * maxX;
+              var y = Math.random() * maxY;
+
+
+              x = Math.max(0, Math.min(x, maxX));
+              y = Math.max(0, Math.min(y, maxY));
+
+
+              button.style.left = `${x}px`;
+              button.style.top = `${y}px`;
+            }
+
+
+
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
